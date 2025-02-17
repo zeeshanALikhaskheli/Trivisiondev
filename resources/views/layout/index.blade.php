@@ -1,64 +1,92 @@
 @extends('layout.layout')
 
 @section('contents')
+<!-- GSAP CDN -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 
-<section class="banner" data-scroll-index='0' >
+
+
+<section class="banner" data-scroll-index="0">
   <div class="banner-overlay">
     <div class="container">
       <div class="row">
         <div class="col-md-8 col-sm-12">
           <div class="banner-text">
-            <h2 class="">All-in-One Online Toolkit</h2>
-            <h6 class="">owned by <a href="" target="_blank" rel="dofollow" class="weblink " style="color: #5a25f1">Zeeshan Ali ,Muhammad Zakria &  Muhammad Hashim  </a>.</h6>
-            <p class="banner-text ">Your ultimate destination for powerful tools, smart converters, insightful blogs, and much more. From seamless file conversions to productivity-enhancing utilities, we've got everything you need—all in one place. Start exploring today</p>
-            <ul >
-              <li><button class="banner-btn"> Create a Account
-              </button></li>
-              <li><button class="banner-btn"> Explore Tools
-              </button></li>
-              {{-- <li><a href="#" class="btn btn-primary wow fadeInUp" data-wow-delay="0.4s">Create an Account</a></li> --}}
-              {{-- <li><a href="#" class="btn btn-primary  wow fadeInUp" data-wow-delay="0.7s">Explore Tools</a></li> --}}
+            <h2 class="banner-title">All-in-One Online Toolkit</h2>
+            <h6 class="banner-subtitle">
+              owned by
+              <a href="" target="_blank" rel="dofollow" class="weblink" style="color: #5a25f1">
+                Zeeshan Ali, Muhammad Zakria & Muhammad Hashim
+              </a>.
+            </h6>
+            <p class="banner-description">
+              Your ultimate destination for powerful tools, smart converters, insightful blogs, and much more...
+            </p>
+            <ul class="banner-buttons">
+              <li><button class="banner-btn">Create an Account</button></li>
+              <li><button class="banner-btn">Explore Tools</button></li>
             </ul>
           </div>
         </div>
-        <div class="col-md-4 col-sm-12"> <img src="images\hero-removebg-preview.png" class="img-fluid hero-image infinity-rotate" /> </div>
+        <div class="col-md-4 col-sm-12">
+          <img src="images/hero-removebg-preview.png" class="img-fluid hero-image infinity-rotate" />
+        </div>
       </div>
     </div>
   </div>
-  <span class="svg-wave"> <img class="svg-hero" src="images/applight-wave.svg"> </span> </section>
+  <span class="svg-wave">
+    <img class="svg-hero" src="images/applight-wave.svg">
+  </span>
+</section>
 
 
-<section class="about section-padding prelative" data-scroll-index='1'>
+
+
+
+<section class="about section-padding prelative" data-scroll-index="1">
   <div class="container">
     <div class="row">
       <div class="col-md-12">
         <div class="sectioner-header text-center">
-          <h3>About</h3>
+          <h3 class="about-title">About</h3>
           <span class="line"></span>
-          <p>Empowering users with a suite of smart tools, our platform simplifies conversions, enhances productivity, and provides valuable insights through expert blogs. Designed for efficiency, ease, and innovation.</p>
+          <p class="about-description">
+            Empowering users with a suite of smart tools, our platform simplifies conversions, enhances productivity, and provides valuable insights through expert blogs.
+          </p>
         </div>
         <div class="section-content text-center">
           <div class="row">
             <div class="col-md-4">
-              <div class="icon-box wow fadeInUp" data-wow-delay="0.2s"> <i class="fa fa-life-ring" aria-hidden="true"></i>
-                <h5>Support</h5>
-                <p>Need help? Our dedicated support team is here to assist you. Whether it's troubleshooting, guidance, or feature requests, we ensure a seamless user experience.</p>
+              <div class="icon-box">
+                <i class="fa fa-life-ring about-icon" aria-hidden="true"></i>
+                <h5 class="about-heading">Support</h5>
+                <p class="about-text">
+                  Need help? Our dedicated support team is here to assist you.
+                </p>
               </div>
             </div>
             <div class="col-md-4">
-              <div class="icon-box wow fadeInUp" data-wow-delay="0.4s"> <i class="fa fa-mobile" aria-hidden="true"></i>
-                <h5>Cross Platform</h5>
-                <p>Access our tools anytime, anywhere! Fully optimized for desktops, tablets, and mobile devices, ensuring smooth functionality across all platforms.</p>
+              <div class="icon-box">
+                <i class="fa fa-mobile about-icon" aria-hidden="true"></i>
+                <h5 class="about-heading">Cross Platform</h5>
+                <p class="about-text">
+                  Access our tools anytime, anywhere! Fully optimized for desktops, tablets, and mobile devices.
+                </p>
               </div>
             </div>
             <div class="col-md-4">
-              <div class="icon-box wow fadeInUp" data-wow-delay="0.6s"> <i class="fa fa-bolt" aria-hidden="true"></i>
-                <h5>Fast</h5>
-                <p>Experience lightning-fast performance with our optimized tools. Quick processing, seamless navigation, and instant results—because your time matters.</p>
+              <div class="icon-box">
+                <i class="fa fa-bolt about-icon" aria-hidden="true"></i>
+                <h5 class="about-heading">Fast</h5>
+                <p class="about-text">
+                  Experience lightning-fast performance with our optimized tools.
+                </p>
               </div>
             </div>
           </div>
-          <a href="#" class="about-btn">Learn More</a> </div>
+          <a href="#" class="about-btn">Learn More</a>
+        </div>
       </div>
     </div>
   </div>
@@ -93,46 +121,51 @@
         </div>
         <div class="section-content text-center">
           <div class="row">
+            <!-- Left Features -->
             <div class="col-md-4 col-sm-12">
-              <div class="media single-feature wow fadeInUp" data-wow-delay="0.2s">
+              <div class="media single-feature feature-box">
                 <div class="media-body text-right media-right-margin">
                   <h5>Fast Processing</h5>
                   <p>Get instant results with our high-speed tools, ensuring quick and efficient performance for all your needs.</p>
                 </div>
                 <div class="media-right icon-border"> <span class="fa fa-bolt" aria-hidden="true"></span> </div>
               </div>
-            
-              <div class="media single-feature wow fadeInUp" data-wow-delay="0.6s">
+              
+              <div class="media single-feature feature-box">
                 <div class="media-body text-right media-right-margin">
-                  <h5>Wifi Compatibility</h5>
+                  <h5>WiFi Compatibility</h5>
                   <p>Enjoy seamless access to our tools from anywhere with full WiFi compatibility—no limitations, just convenience.</p>
                 </div>
                 <div class="media-right icon-border"> <span class="fa fa-wifi" aria-hidden="true"></span> </div>
               </div>
             </div>
+
+            <!-- Animated Image -->
             <div class="col-md-4 d-none d-md-block d-lg-block">
-              <div class="feature-mobile"> 
-                <img src="images/features.jpg" style="height:100%" class="img-fluid scale-animation"/> 
+              <div class="feature-mobile">
+                <img src="images/hashim.jpeg" style="height:100%" class="img-fluid scale-animation "/>
               </div>
             </div>
+
+            <!-- Right Features -->
             <div class="col-md-4 col-sm-12">
-              <div class="media single-feature wow fadeInUp" data-wow-delay="0.2s">
+              <div class="media single-feature feature-box">
                 <div class="media-left icon-border media-right-margin"> <span class="fa fa-check-double" aria-hidden="true"></span> </div>
                 <div class="media-body text-left">
                   <h5>Regular Updates</h5>
                   <p>We continuously enhance our platform with new features, improvements, and security updates to keep you ahead.</p>
                 </div>
               </div>
-              <div class="media single-feature wow fadeInUp" data-wow-delay="0.4s">
+
+              <div class="media single-feature feature-box">
                 <div class="media-left icon-border media-right-margin"> <span class="fa fa-dollar-sign" aria-hidden="true"></span> </div>
                 <div class="media-body text-left">
                   <h5>Save Money</h5>
                   <p>Access premium-quality tools and services without breaking the bank—powerful solutions at no cost!</p>
                 </div>
               </div>
-              
             </div>
-          </div>
+          </div> <!-- Row -->
         </div>
       </div>
     </div>

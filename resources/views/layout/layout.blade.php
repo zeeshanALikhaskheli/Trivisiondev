@@ -14,7 +14,6 @@
 <link rel="shortcut icon" href="{{asset('images/favicon.png')}}" type="image/x-icon" style="width:100%">
 
 
- 
 </head>
 
 
@@ -28,7 +27,7 @@
     transition: all 0.3s ease-in-out;">
   <div class="container">
     <!-- Logo -->
-    <a class="navbar-brand navbar-logo" href="#"> 
+    <a class="navbar-brand navbar-logo" href="/"> 
       <img src="{{asset('images/logo-bg.png')}}" alt="logo" class="logo-1" > 
     </a>
     
@@ -49,7 +48,7 @@
             aria-haspopup="true" aria-expanded="false"> Features </a>
           <div class="dropdown-menu" aria-labelledby="featuresDropdown">
             <a class="dropdown-item feature-nav-link" href="/blog" style="color:black">Blog.ai</a>
-            <a class="dropdown-item feature-nav-link" href="#" style="color:black">Generative</a>
+            <a class="dropdown-item feature-nav-link" href="/download" style="color:black">Yt-Download</a>
             <a class="dropdown-item feature-nav-link" href="#" style="color:black" >WORD to PDF</a>
           </div>
         </li>
@@ -201,7 +200,144 @@ $(window).on("load",function (){
 
 
 </script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
 
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<!-- GSAP CDN -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+
+<!-- GSAP Animation Script -->
+<script>
+  gsap.from(".banner-title", { opacity: 0, y: -50, duration: 1, ease: "power2.out" });
+  gsap.from(".banner-subtitle", { opacity: 0, y: -30, duration: 1.2, delay: 0.3, ease: "power2.out" });
+  gsap.from(".banner-description", { opacity: 0, y: -20, duration: 1.4, delay: 0.5, ease: "power2.out" });
+
+  gsap.from(".banner-buttons li", {
+    opacity: 0,
+    y: 20,
+    duration: 1.5,
+    stagger: 0.2, // Buttons animate one after another
+    delay: 0.7,
+    ease: "power2.out"
+  });
+
+  gsap.from(".hero-image", {
+    opacity: 0,
+    scale: 0.8,
+    duration: 1.5,
+    delay: 1,
+    ease: "elastic.out(1, 0.5)"
+  });
+
+  gsap.to(".hero-image", {
+    y: 10,
+    repeat: -1,
+    yoyo: true,
+    duration: 2,
+    ease: "power1.inOut"
+  });
+
+
+  gsap.registerPlugin(ScrollTrigger);
+
+  gsap.from(".about-title", {
+    opacity: 0,
+    y: -50,
+    duration: 1,
+    ease: "power2.out",
+    scrollTrigger: {
+      trigger: ".about-title",
+      start: "top 80%", 
+      toggleActions: "play none none none"
+    }
+  });
+
+  gsap.from(".about-description", {
+    opacity: 0,
+    y: -30,
+    duration: 1.2,
+    delay: 0.2,
+    ease: "power2.out",
+    scrollTrigger: {
+      trigger: ".about-description",
+      start: "top 85%",
+      toggleActions: "play none none none"
+    }
+  });
+
+  gsap.from(".icon-box", {
+    opacity: 0,
+    y: 30,
+    scale: 0.8,
+    duration: 1.2,
+    stagger: 0.3,
+    ease: "power2.out",
+    scrollTrigger: {
+      trigger: ".icon-box",
+      start: "top 90%",
+      toggleActions: "play none none none"
+    }
+  });
+
+  gsap.from(".about-icon", {
+    opacity: 0,
+    scale: 0.5,
+    duration: 1,
+    stagger: 0.3,
+    ease: "elastic.out(1, 0.5)",
+    scrollTrigger: {
+      trigger: ".about-icon",
+      start: "top 95%",
+      toggleActions: "play none none none"
+    }
+  });
+
+  gsap.from(".about-btn", {
+    opacity: 0,
+    y: 20,
+    duration: 1.5,
+    ease: "power2.out",
+    scrollTrigger: {
+      trigger: ".about-btn",
+      start: "top 95%",
+      toggleActions: "play none none none"
+    }
+  });
+
+
+    gsap.registerPlugin(ScrollTrigger);
+
+  // Animate Feature Boxes
+  gsap.from(".feature-box", {
+    opacity: 0,
+    y: 50,
+    duration: 1.2,
+    stagger: 0.3,
+    ease: "power2.out",
+    scrollTrigger: {
+      trigger: ".feature-box",
+      start: "top 85%",
+      toggleActions: "play none none none"
+    }
+  });
+
+  // Animate Image (Scaling Effect)
+  gsap.from(".scale-animation", {
+    opacity: 0,
+    scale: 0.5,
+    duration: 1.5,
+    ease: "power2.out",
+    scrollTrigger: {
+      trigger: ".scale-animation",
+      start: "top 90%",
+      toggleActions: "play none none none"
+    }
+  });
+</script>
 
 </body>
 </html>
