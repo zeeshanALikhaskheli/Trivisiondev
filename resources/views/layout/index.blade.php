@@ -143,7 +143,7 @@
             <!-- Animated Image -->
             <div class="col-md-4 d-none d-md-block d-lg-block">
               <div class="feature-mobile">
-                <img src="images/hashim.jpeg" style="height:100%" class="img-fluid scale-animation "/>
+                <img src="images/features.jpg" style="height:100%" class="img-fluid scale-animation "/>
               </div>
             </div>
 

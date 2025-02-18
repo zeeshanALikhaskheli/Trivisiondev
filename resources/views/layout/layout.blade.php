@@ -49,7 +49,7 @@
           <div class="dropdown-menu" aria-labelledby="featuresDropdown">
             <a class="dropdown-item feature-nav-link" href="/blog" style="color:black">Blog.ai</a>
             <a class="dropdown-item feature-nav-link" href="/download" style="color:black">Yt-Download</a>
-            <a class="dropdown-item feature-nav-link" href="#" style="color:black" >WORD to PDF</a>
+            <a class="dropdown-item feature-nav-link" href="/analytics" style="color:black" >Website Analytics</a>
           </div>
         </li>
 
